@@ -1,11 +1,33 @@
+# Build artifacts
 target/
+
+# Shared libraries
 *.so
+*.dylib
+*.dll
+
+# Object files
 *.o
-__pycache__/
+*.obj
+
+# Python
 *.pyc
-*.pyo
-*.ll
-*.bc
-*.s
-*.wasm
+__pycache__/
+*.egg-info/
+dist/
+*.whl
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

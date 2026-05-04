@@ -34,7 +34,8 @@
 
       "Work" shall mean the work of authorship, whether in Source or
       Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work.
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
 
       "Derivative Works" shall mean any work, whether in Source or Object
       form, that is based on (or derived from) the Work and for which the
@@ -119,6 +120,13 @@
           that such additional attribution notices cannot be construed
           as modifying the License.
 
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
    5. Submission of Contributions. Unless You explicitly state otherwise,
       any Contribution intentionally submitted for inclusion in the Work
       by You to the Licensor shall be under the terms and conditions of
@@ -146,7 +154,7 @@
       whether in tort (including negligence), contract, or otherwise,
       unless required by applicable law (such as deliberate and grossly
       negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, commercial, special,
+      liable to You for damages, including any direct, indirect, special,
       incidental, or consequential damages of any character arising as a
       result of this License or out of the use or inability to use the
       Work (including but not limited to damages for loss of goodwill,
@@ -167,7 +175,7 @@
 
    END OF TERMS AND CONDITIONS
 
-   Copyright 2025-2026 SuperInstance
+   Copyright 2024-2026 SuperInstance Contributors
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
