@@ -1,0 +1,1 @@
+# GUARD Formal Semantics\n\nMachine-checked specification of the GUARD constraint language.\n\nStatus: **In Development**\n\nThis directory will contain the formal semantics of GUARD in Coq/Isabelle,\ncertified 1:1 with the grammar in guard-dsl/.
