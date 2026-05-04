@@ -1,0 +1,11 @@
+target/
+*.so
+*.o
+__pycache__/
+*.pyc
+*.pyo
+*.ll
+*.bc
+*.s
+*.wasm
+.DS_Store
