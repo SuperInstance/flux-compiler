@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flux-compiler"
+version = "0.1.0"
+description = "FLUX: A working constraint compiler with differential testing"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Casey DiGennaro", email = "contact@cocapn.io"},
+    {name = "CCC", email = "ccc@cocapn.io"},
+]
+keywords = ["constraint", "compiler", "safety", "flux", "guard"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Compilers",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+flux = "flux_compiler:main"
+
+[project.urls]
+Homepage = "https://github.com/SuperInstance/flux-compiler"
+Repository = "https://github.com/SuperInstance/flux-compiler"
