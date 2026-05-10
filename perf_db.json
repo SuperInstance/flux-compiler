@@ -1,0 +1,62 @@
+{
+  "check": {
+    "source": "numpy",
+    "calls": 1000,
+    "total_ns": 2929559,
+    "avg_ns": 2929.559,
+    "capabilities": {
+      "has_avx2": false,
+      "has_numpy": true,
+      "arch": "x86_64",
+      "cores": 24
+    }
+  },
+  "bloom_merge": {
+    "source": "fortran_ior (/tmp/tmpdycqu8_g.so)",
+    "calls": 100,
+    "total_ns": 97854,
+    "avg_ns": 978.54,
+    "capabilities": {
+      "has_avx2": false,
+      "has_numpy": true,
+      "arch": "x86_64",
+      "cores": 24
+    }
+  },
+  "snap": {
+    "source": "python_voronoi_skip",
+    "calls": 500,
+    "total_ns": 85951691,
+    "avg_ns": 171903.382,
+    "capabilities": {
+      "has_avx2": false,
+      "has_numpy": true,
+      "arch": "x86_64",
+      "cores": 24
+    }
+  },
+  "norm": {
+    "source": "zig_shared_lib (/tmp/tmphdb8mb1z.so)",
+    "calls": 6,
+    "total_ns": 30968,
+    "avg_ns": 5161.333333333333,
+    "capabilities": {
+      "has_avx2": false,
+      "has_numpy": true,
+      "arch": "x86_64",
+      "cores": 24
+    }
+  },
+  "fold": {
+    "source": "numpy",
+    "calls": 5,
+    "total_ns": 137134,
+    "avg_ns": 27426.8,
+    "capabilities": {
+      "has_avx2": false,
+      "has_numpy": true,
+      "arch": "x86_64",
+      "cores": 24
+    }
+  }
+}
