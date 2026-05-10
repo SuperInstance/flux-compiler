@@ -1,0 +1,137 @@
+{
+  "NORM": {
+    "winner": "scalar_i64",
+    "ns_per_op": 0.2,
+    "ops_per_sec": 4183000000.0,
+    "cycles_estimate": 0.82,
+    "all_strategies": [
+      {
+        "name": "scalar_i64",
+        "ns_per_op": 0.2,
+        "correct": true
+      },
+      {
+        "name": "cast_inline",
+        "ns_per_op": 0.4,
+        "correct": true
+      },
+      {
+        "name": "volatile_barrier",
+        "ns_per_op": 0.6,
+        "correct": true
+      },
+      {
+        "name": "f64_via_double",
+        "ns_per_op": 0.2,
+        "correct": true
+      }
+    ]
+  },
+  "CHECK": {
+    "winner": "avx2_movemask",
+    "ns_per_op": 0.2,
+    "ops_per_sec": 4196500000.0,
+    "cycles_estimate": 0.82,
+    "all_strategies": [
+      {
+        "name": "scalar_loop",
+        "ns_per_op": 5.1,
+        "correct": true
+      },
+      {
+        "name": "avx2_movemask",
+        "ns_per_op": 0.2,
+        "correct": true
+      },
+      {
+        "name": "avx2_reduce",
+        "ns_per_op": 9.7,
+        "correct": true
+      },
+      {
+        "name": "unrolled_scalar",
+        "ns_per_op": 7.0,
+        "correct": true
+      }
+    ]
+  },
+  "BLOOM": {
+    "winner": "avx2_8wide_unrolled",
+    "ns_per_op": 169.5,
+    "ops_per_sec": 5900000.0,
+    "cycles_estimate": 694.9499999999999,
+    "all_strategies": [
+      {
+        "name": "scalar_loop",
+        "ns_per_op": 408.9,
+        "correct": true
+      },
+      {
+        "name": "avx2_4wide",
+        "ns_per_op": 185.9,
+        "correct": true
+      },
+      {
+        "name": "avx2_8wide_unrolled",
+        "ns_per_op": 169.5,
+        "correct": true
+      },
+      {
+        "name": "restrict_ptr",
+        "ns_per_op": 423.3,
+        "correct": true
+      }
+    ]
+  },
+  "SNAP": {
+    "winner": "round_only",
+    "ns_per_op": 0.2,
+    "ops_per_sec": 4293100000.0000005,
+    "cycles_estimate": 0.82,
+    "all_strategies": [
+      {
+        "name": "naive_6neighbor",
+        "ns_per_op": 16.3,
+        "correct": true
+      },
+      {
+        "name": "voronoi_skip",
+        "ns_per_op": 5.6,
+        "correct": true
+      },
+      {
+        "name": "round_only",
+        "ns_per_op": 0.2,
+        "correct": true
+      },
+      {
+        "name": "voronoi_skip_const",
+        "ns_per_op": 6.0,
+        "correct": true
+      }
+    ]
+  },
+  "FOLD": {
+    "winner": "scalar_mean_then_contract",
+    "ns_per_op": 12.5,
+    "ops_per_sec": 80100000.0,
+    "cycles_estimate": 51.24999999999999,
+    "all_strategies": [
+      {
+        "name": "scalar_mean_then_contract",
+        "ns_per_op": 12.5,
+        "correct": true
+      },
+      {
+        "name": "avx2_sum_contract",
+        "ns_per_op": 17.0,
+        "correct": true
+      },
+      {
+        "name": "fma_contract",
+        "ns_per_op": 12.8,
+        "correct": true
+      }
+    ]
+  }
+}
