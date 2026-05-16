@@ -1,0 +1,3 @@
+constraint tile_size in [0, 4096]
+constraint agent_count in [0, 50]
+constraint spawn_rate in [0, 100]
