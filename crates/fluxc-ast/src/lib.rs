@@ -73,3 +73,48 @@ impl Default for Program {
         Self::new()
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn node_id_is_unique() {
+        let a = NodeId::new();
+        let b = NodeId::new();
+        assert_ne!(a, b);
+    }
+
+    #[test]
+    fn empty_program_has_no_constraints() {
+        let prog = Program::new();
+        assert!(prog.constraints.is_empty());
+    }
+
+    #[test]
+    fn range_constraint_equality() {
+        let c1 = ConstraintKind::Range { lo: 0, hi: 100 };
+        let c2 = ConstraintKind::Range { lo: 0, hi: 100 };
+        assert_eq!(c1, c2);
+    }
+
+    #[test]
+    fn composite_constraint_and() {
+        let left = ConstraintKind::Exact { value: 42 };
+        let right = ConstraintKind::Range { lo: 0, hi: 100 };
+        let combined = ConstraintKind::And(Box::new(left), Box::new(right));
+        if let ConstraintKind::And(l, r) = combined {
+            assert_eq!(*l, ConstraintKind::Exact { value: 42 });
+            assert_eq!(*r, ConstraintKind::Range { lo: 0, hi: 100 });
+        } else {
+            panic!("expected And constraint");
+        }
+    }
+
+    #[test]
+    fn slot_ref_equality() {
+        let s1 = SlotRef { slot: 1, name: "temp".into() };
+        let s2 = SlotRef { slot: 1, name: "temp".into() };
+        assert_eq!(s1, s2);
+    }
+}

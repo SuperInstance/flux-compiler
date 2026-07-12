@@ -93,7 +93,7 @@ jobs:
             ${{ runner.os }}-cargo-bench-
 
       - name: Run benchmarks
-        run: cargo bench --workspace || true
+        run: cargo bench --workspace
 
       - name: Upload benchmark results
         uses: actions/upload-artifact@v4

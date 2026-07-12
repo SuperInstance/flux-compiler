@@ -83,3 +83,29 @@ fn generate_native(module: &IrModule) -> Result<CodegenOutput, CodegenError> {
         bytes: Vec::new(),
     })
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use fluxc_ir::IrModule;
+
+    #[test]
+    fn generate_native_produces_output() {
+        let module = IrModule::new("test_prog");
+        let result = generate(&module, Target::Native).unwrap();
+        assert_eq!(result.target, Target::Native);
+        assert!(result.assembly.contains("test_prog"));
+    }
+
+    #[test]
+    fn target_from_str_native() {
+        let target = Target::from_str("native").unwrap();
+        assert_eq!(target, Target::Native);
+    }
+
+    #[test]
+    fn target_from_str_unknown_errors() {
+        let result = Target::from_str("unknown_target");
+        assert!(result.is_err());
+    }
+}

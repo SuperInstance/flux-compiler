@@ -75,3 +75,36 @@ impl IrModule {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn basic_block_new() {
+        let block = BasicBlock::new("entry");
+        assert_eq!(block.label, "entry");
+        assert!(block.instructions.is_empty());
+    }
+
+    #[test]
+    fn ir_module_new() {
+        let module = IrModule::new("test");
+        assert_eq!(module.name, "test");
+        assert!(module.blocks.is_empty());
+    }
+
+    #[test]
+    fn fluxir_equality() {
+        let a = FluxIR::CheckExact { slot: 0, value: 42 };
+        let b = FluxIR::CheckExact { slot: 0, value: 42 };
+        assert_eq!(a, b);
+    }
+
+    #[test]
+    fn halt_reason_variants() {
+        let pass = HaltReason::Pass;
+        let violation = HaltReason::Violation { slot: 3 };
+        assert_ne!(pass, violation);
+    }
+}

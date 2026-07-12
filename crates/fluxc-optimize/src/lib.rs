@@ -41,7 +41,7 @@ pub fn strength_reduction(_module: &mut IrModule) -> Result<(), OptError> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use fluxc_ir::FluxIR;
+    use fluxc_ir::{FluxIR, BasicBlock};
 
     #[test]
     fn dead_code_removes_nop() {
