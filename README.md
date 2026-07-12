@@ -1,4 +1,6 @@
 # FLUX Compiler
+
+> **FLUX — Fluid Language Universal eXecution**
 > Correctness Verified. Safety Certified. Zero Surprises.
 
 ---
@@ -177,6 +179,36 @@ Optional Flags:
   --no-optimizations            Disable all proven optimizations
   --stack-limit <BYTES>         Fail compile if stack usage exceeds limit
 ```
+
+---
+
+## 📦 Related Packages
+
+FLUX is implemented across multiple languages — same bytecode, different shells:
+
+| Package | Language | Registry | Install |
+|---------|----------|----------|---------|
+| **[flux-vm](https://pypi.org/project/flux-vm/)** | Python | PyPI | `pip install flux-vm` |
+| **[fluxvm](https://crates.io/crates/fluxvm)** | Rust | crates.io | `cargo add fluxvm` |
+| **[flux-js](https://www.npmjs.com/package/flux-js)** | JavaScript | npm | `npm install flux-js` |
+| **[flux-compiler](https://github.com/SuperInstance/flux-compiler)** | Rust/Python | GitHub | `cargo install flux-compiler` |
+
+Additional implementations: [C](https://github.com/SuperInstance/flux-runtime-c) · [Zig](https://github.com/SuperInstance/flux-zig) · [Go](https://github.com/SuperInstance/flux-swarm) · [Java](https://github.com/SuperInstance/flux-java) · [WASM](https://github.com/SuperInstance/flux-wasm) · [CUDA](https://github.com/SuperInstance/flux-cuda)
+
+## 🌐 Ecosystem
+
+FLUX is part of a broader research ecosystem exploring agent-first computation:
+
+| Project | Description |
+|---------|-------------|
+| [PLATO Engine Block](https://github.com/SuperInstance/plato-engine-block) | Constraint engine powering FLUX verification |
+| [Constraint-Theory-Core](https://github.com/SuperInstance/Constraint-Theory) | Mathematical foundations for constraint-based computation |
+| [AI-Writings](https://github.com/SuperInstance/AI-Writings) | Philosophy, essays, and design rationale behind FLUX |
+| [Captain's Log](https://github.com/SuperInstance/captains-log) | Oracle1 growth diary and agent dojo curriculum |
+| [Iron-to-Iron](https://github.com/SuperInstance/iron-to-iron) | I2I protocol — agents communicate through git commits |
+| [flux-research](https://github.com/SuperInstance/flux-research) | 40K words: compiler taxonomy, ISA v2, agent-first design |
+
+📖 **[Full package index →](https://github.com/SuperInstance/flux/blob/main/PACKAGES.md)**
 
 ---
 
